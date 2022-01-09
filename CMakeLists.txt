@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 2.8.11)
 
-project(jpgs-to-pdf)
+project(images-to-pdf)
 
-install(FILES LICENSE DESTINATION /usr/share/doc/jpgs-to-pdf/ )
-install(FILES README.md DESTINATION /usr/share/doc/jpgs-to-pdf/ )
-install(FILES src/jpgs_to_pdf.sh DESTINATION /usr/bin/ PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
-set(CPACK_PACKAGE_NAME "jpgs-to-pdf")
+install(FILES LICENSE DESTINATION /usr/share/doc/images-to-pdf/ )
+install(FILES README.md DESTINATION /usr/share/doc/images-to-pdf/ )
+install(FILES src/images_to_pdf.sh DESTINATION /usr/bin/ PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
+set(CPACK_PACKAGE_NAME "images-to-pdf")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "script to convert multiple jpegs into pdf")
 set(CPACK_PACKAGE_VERSION "1.0.1")
 set(SYSTEM_ARCH "all")
