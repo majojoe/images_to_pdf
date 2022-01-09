@@ -1,10 +1,10 @@
 **Table of Contents**
 
-# Why SDDM Theme Expose Blue?
-In a Enterprise environment it is state of the art to have a network that is managed by a domain controller. This SDDM Theme works without user icons, therefore is works perfectly with users that are provided by the domain controller.
+# Why images_to_pdf?
+If there is the requirement to convert more images (jpeg's or png's) into a single pdf. This is the easy way to go.
 # Installation
-Download [here](https://github.com/majojoe/expose_blue/releases/download/v1.0.3/expose-blue-1.0.3-linux-amd64.deb) and install the \*.deb package provided using the following command:
+Download [here](https://github.com/majojoe/images_to_pdf/releases/download/v1.0.2/images-to-pdf-1.0.2-linux-amd64.deb) and install the \*.deb package provided using the following command:
 ```bash
-sudo apt install ./expose-blue-1.0.3-linux-amd64.deb
+sudo apt install ./images-to-pdf-1.0.2-linux-amd64.deb
 ```
  
