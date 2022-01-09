@@ -1,0 +1,8 @@
+ #!/bin/bash
+
+POLICY_FILE="/etc/ImageMagick-6/policy.xml"
+#POLICY_FILE="test/policy.xml" 
+
+if [ -f "${POLICY_FILE}" ]; then
+        sed -i "s/^[[:space:]]*<!-- <policy domain=\"coder\" rights=\"none\" pattern=\"PDF\" \/> -->/  <policy domain=\"coder\" rights=\"none\" pattern=\"PDF\" \/>/g" "${POLICY_FILE}"
+fi
