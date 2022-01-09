@@ -1,15 +1,19 @@
 #!/bin/bash -e
 
 OUTPUT_FILE=""
+QUALITY="50"
 
-usage() { echo "Usage: $0 [-o <OUTPUT_FILE_NAME>]" 1>&2; exit 1; }
+usage() { echo "Usage: $0 [-o <OUTPUT_FILE_NAME>] | [-q <QUALITY_IN_PERCENT>]" 1>&2; exit 1; }
 
-while getopts ":o:" o; do
+while getopts ":o:q:" o; do
     case "${o}" in
         o)
-            echo "${OPTARG}"
             OUTPUT_FILE=${OPTARG}
             ;;
+        q)
+            QUALITY=${OPTARG}
+            ;;
+        
         *)
             usage
             ;;
@@ -21,5 +25,5 @@ if [ -z "${OUTPUT_FILE}" ]; then
     usage
 fi
 
-convert "*.jpg" -quality 50 "${OUTPUT_FILE}.pdf"
+convert "*.{jpg,jpeg,png}" -quality "${QUALITY}" "${OUTPUT_FILE}.pdf"
 
