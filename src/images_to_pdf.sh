@@ -25,5 +25,4 @@ if [ -z "${OUTPUT_FILE}" ]; then
     usage
 fi
 
-convert "*.{jpg,jpeg,png}" -quality "${QUALITY}" "${OUTPUT_FILE}.pdf"
-
+ls  {*.jpg,*.jpeg,*.png}  2> /dev/null | sort -V | sed -n 's/..*/"&"/p' | paste -sd' ' - | convert @- -quality "${QUALITY}" "${OUTPUT_FILE}.pdf"
